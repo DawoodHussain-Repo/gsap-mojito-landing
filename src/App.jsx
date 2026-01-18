@@ -1,16 +1,22 @@
 import gsap from "gsap";
-import { ScrollTrigger, SplitText } from "gsap/all";
+import { ScrollTrigger } from "gsap/all";
 import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-gsap.registerPlugin(ScrollTrigger, SplitText);
+import Showcase from "./components/Showcase";
+import About from "./components/About";
+import Footer from "./components/Footer";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   return (
-    <main>
+    <main className="noisy bg-black w-full min-h-screen">
       <Navbar />
       <Hero />
-      <div className="h-dvh bg-black"></div>
+      <Showcase />
+      <About />
+      <Footer />
     </main>
   );
 };
