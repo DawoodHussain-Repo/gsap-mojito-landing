@@ -8,8 +8,10 @@
 }
 
 @theme {
-  --color-yellow: #e7d393;
-  --color-white-100: #efefef;
+  --color-yellow: #d4a373;
+  --color-white-100: #f5ebd9;
+  --color-vintage-brown: #2b1b11;
+  --color-vintage-dark: #1f1209;
   --font-sans: "Mona Sans", sans-serif;
   --font-modern-negra: "Modern Negra", sans-serif;
   --font-serif: "DM Serif Text", serif;
@@ -18,8 +20,8 @@
 html,
 body {
   width: 100%;
-  background-color: black;
-  color: white;
+  background-color: #2b1b11;
+  color: #f5ebd9;
   overflow-x: hidden;
   overscroll-behavior: none;
 }
@@ -37,8 +39,8 @@ body {
 }
 
 @utility text-stroke-hover {
-  -webkit-text-stroke: 1px #e7d393;
-  color: #e7d393;
+  -webkit-text-stroke: 1px var(--color-yellow);
+  color: var(--color-yellow);
 }
 
 @utility no-scrollbar {

@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   return (
-    <main className="noisy bg-black w-full min-h-screen">
+    <main className="noisy bg-[#2b1b11] w-full min-h-screen text-[#f5ebd9]">
       <Navbar />
       <Hero />
       <Showcase />
