@@ -11,8 +11,8 @@ const drinks = [
     name: "Classic Mint",
     desc: "The timeless refresher with crushed mint and fresh lime.",
     img: "/images/drink1.png",
-    color: "#e7d393",
-    bg: "#1a1810" // Dark gold
+    color: "#d4a373",
+    bg: "#2b1b11" // Vintage brown
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const drinks = [
     desc: "A sweet twist with fresh strawberries and raspberries.",
     img: "/images/drink2.png",
     color: "#ff6b6b",
-    bg: "#1a0b0b" // Dark red
+    bg: "#3a1f18" // Darker reddish brown
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const drinks = [
     desc: "Infused with passion fruit and mango for a caribbean vibe.",
     img: "/images/drink3.png",
     color: "#4ecdc4",
-    bg: "#0b1a1a" // Dark teal
+    bg: "#1f2a1a" // Dark greenish brown
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const drinks = [
     desc: "Dark blackberries and a hint of spice for the bold.",
     img: "/images/drink4.png",
     color: "#a66cff",
-    bg: "#120b1a" // Dark purple
+    bg: "#281b2b" // Dark purple brown
   },
 ];
 
@@ -117,13 +117,13 @@ const Showcase = () => {
       className="relative h-screen w-full overflow-hidden flex items-center"
     >
       {/* Dynamic Background */}
-      <div ref={bgRef} className="absolute inset-0 bg-[#1a1810] transition-colors duration-1000"></div>
+      <div ref={bgRef} className="absolute inset-0 bg-[#2b1b11] transition-colors duration-1000"></div>
       
        {/* Global Texture Overlay */}
       <div className="absolute inset-0 opacity-20 bg-[url('/images/noise.png')] pointer-events-none z-10"></div>
 
       <div className="absolute top-10 left-10 md:left-20 z-20 mix-blend-difference">
-         <h2 className="text-4xl md:text-6xl font-modern-negra text-white">The Collection</h2>
+         <h2 className="text-4xl md:text-6xl font-modern-negra text-[#f5ebd9]">The Collection</h2>
       </div>
 
         {/* The Slider Container - Width = 100vw * 4 */}
@@ -135,7 +135,7 @@ const Showcase = () => {
           >
              {/* Background Decoration Text */}
              <div className="absolute inset-0 flex justify-center items-center pointer-events-none overflow-hidden">
-                 <h2 className="text-[30vw] font-modern-negra text-white opacity-[0.03] select-none whitespace-nowrap">
+                 <h2 className="text-[30vw] font-modern-negra text-[#d4a373] opacity-[0.05] select-none whitespace-nowrap">
                      {drink.name.split(" ")[0]}
                  </h2>
              </div>
@@ -146,7 +146,7 @@ const Showcase = () => {
                <img src="/images/hero-left-leaf.png" className="floater absolute -top-20 -left-10 w-20 opacity-50 blur-[2px]" />
                <img src="/images/slider-right-leaf.png" className="floater absolute bottom-20 -right-10 w-24 opacity-60" />
                
-               <div className="absolute inset-0 bg-white/5 blur-3xl rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+               <div className="absolute inset-0 bg-[#d4a373]/5 blur-3xl rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
               <img
                 src={drink.img}
                 alt={drink.name}
@@ -158,24 +158,24 @@ const Showcase = () => {
             </div>
 
             {/* Content */}
-            <div className="md:w-1/3 flex flex-col gap-6 text-center md:text-left z-10 p-10 glass rounded-3xl backdrop-blur-md border border-white/10 shadow-2xl">
+            <div className="md:w-1/3 flex flex-col gap-6 text-center md:text-left z-10 p-10 glass rounded-3xl backdrop-blur-md border border-[#d4a373]/10 shadow-2xl bg-[#1f1209]/40">
               <span className="text-stroke text-8xl md:text-9xl font-modern-negra absolute -top-12 -right-10 opacity-30 pointer-events-none select-none">
                  0{index + 1}
               </span>
-              <h3 className="text-4xl md:text-6xl font-modern-negra text-white leading-none">
+              <h3 className="text-4xl md:text-6xl font-modern-negra text-[#f5ebd9] leading-none">
                 {drink.name}
               </h3>
-              <p className="font-sans text-gray-300 text-lg font-light leading-relaxed">
+              <p className="font-sans text-[#f5ebd9]/70 text-lg font-light leading-relaxed">
                 {drink.desc}
               </p>
               
-              <div className="w-full h-[1px] bg-white/20 my-2"></div>
+              <div className="w-full h-[1px] bg-[#d4a373]/20 my-2"></div>
               
               <div className="flex gap-4 justify-center md:justify-start items-center">
-                   <button className="px-8 py-3 bg-white text-black hover:bg-yellow-400 transition-all duration-300 font-sans uppercase tracking-widest text-xs font-bold rounded-full">
+                   <button className="px-8 py-3 bg-[#d4a373] text-[#1f1209] hover:bg-[#f5ebd9] transition-all duration-300 font-sans uppercase tracking-widest text-xs font-bold rounded-full">
                        Order Now
                    </button>
-                   <p className="font-modern-negra text-2xl text-yellow-400">$18.00</p>
+                   <p className="font-modern-negra text-2xl text-[#d4a373]">$18.00</p>
               </div>
             </div>
           </div>
@@ -183,7 +183,7 @@ const Showcase = () => {
       </div>
       
        <div className="absolute bottom-10 right-10 flex gap-2 z-20">
-          <div className="text-white/50 text-xs font-sans uppercase tracking-widest animate-pulse">
+          <div className="text-[#f5ebd9]/50 text-xs font-sans uppercase tracking-widest animate-pulse">
               Drag or Scroll
           </div>
        </div>
